@@ -1,0 +1,7 @@
+FROM alpine
+WORKDIR /zip
+ADD example.zip .
+WORKDIR /tar
+ADD example.tar.gz .
+WORKDIR /file
+ADD example-file.txt .
