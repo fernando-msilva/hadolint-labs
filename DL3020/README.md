@@ -59,7 +59,7 @@ hadolint-lab   add-remote    9f0aebb51b04   2 hours ago   205MB
 É possível também identificar a layer que é criada com o `ADD` ao baixar o arquivo remoto e é a responsável pela diferença de tamanho entre as imagens.
 
 ```sh
-docker history hadolint-lab:add-remote
+$ docker history hadolint-lab:add-remote
 IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
 9f0aebb51b04   2 hours ago   RUN /bin/sh -c tar -xf wine-1.9.19.tar.bz2 &…   175MB     buildkit.dockerfile.v0
 <missing>      2 hours ago   ADD https://dl.winehq.org/wine/source/1.9/wi…   23.5MB    buildkit.dockerfile.v0
@@ -70,7 +70,7 @@ IMAGE          CREATED       CREATED BY                                      SIZ
 
 
 ```sh
-docker history hadolint-lab:wget-remote
+$ docker history hadolint-lab:wget-remote
 IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
 47094e9f2de2   2 hours ago   RUN /bin/sh -c wget https://dl.winehq.org/wi…   175MB     buildkit.dockerfile.v0
 <missing>      2 hours ago   LABEL DL=3020                                   0B        buildkit.dockerfile.v0
