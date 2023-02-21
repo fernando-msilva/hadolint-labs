@@ -1,0 +1,4 @@
+FROM ubuntu:18.04
+COPY loop-script.sh /
+RUN chmod +x /loop-script.sh
+CMD /loop-script.sh
