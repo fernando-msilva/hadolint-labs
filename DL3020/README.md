@@ -7,7 +7,7 @@
 - Aumentar o tamanho da imagem final ao baixar arquivos por URL
 - ADD possui funcionalidades desnecessárias para cópia de arquivos e pastas
 
-O melhor cenário para utilização do `ADD` é quando existem arquivos locais compactados, pois ele possúi a funcionalidade de descompactação de arquivos de compressão `gzip`, `bzip2` ou `xz` para dentro da imagem. Arquivos com tipos de compressão não suportadas serão copiados na sua forma original.
+O melhor cenário para utilização do `ADD` é quando existem arquivos locais compactados, pois ele possui a funcionalidade de descompactação de arquivos de compressão `gzip`, `bzip2` ou `xz` para dentro da imagem. Arquivos com tipos de compressão não suportadas serão copiados na sua forma original.
 
 As funcionalidades do `ADD` não fornecem vantagens para cópia de arquivos normais e diretórios, logo faz mais sentido a utilização do `COPY`.
 
@@ -32,7 +32,7 @@ $ docker image build -t hadolint-lab:add-local -f Dockerfile.local .
 
 Execute um container utilizando a imagem `hadolint-lab:add-local`. Observe que foram criadas 3 pastas: `/zip`, `/tar` e `/file`.
 
-Observe que na pasta `/file`, apesar de não ser o recomendado, a instrução `ADD` copiou corretamente o arquivo. Na pasta `/tar` o arquivo foi copiado e extraído automaticamente. E por fim na pastra `/zip` o arquivo foi apenas copiado, por não estar compactado com uma das compressões suportadas.
+Observe que na pasta `/file`, apesar de não ser o recomendado, a instrução `ADD` copiou corretamente o arquivo. Na pasta `/tar` o arquivo foi copiado e extraído automaticamente. E por fim na pasta `/zip` o arquivo foi apenas copiado, por não estar compactado com uma das compressões suportadas.
 
 ```sh
 $ docker container run -it hadolint-lab:add-local
